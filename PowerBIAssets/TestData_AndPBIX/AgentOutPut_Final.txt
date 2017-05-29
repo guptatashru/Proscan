@@ -1,0 +1,5 @@
+('316e9064-b645-11e6-abfa-fbeb404a08cf','Johnson@SygentaAgent.com','Daisy Johnson','SomeAddress','2345997','Johnson@SygentaAgent.com','Johnson@SygentaAgent.com','NULL','TRUE','MyDefault','1980-01-01','2016-11-29','0'),
+('fb6374fc-b645-11e6-abfa-fbeb404a08cf','Coulson@SygentaAgent.com','Phil Coulson','SomeAddress','8510453','Coulson@SygentaAgent.com','Coulson@SygentaAgent.com','NULL','TRUE','MyDefault','1980-01-01','2016-11-29','0'),
+('2074d1c2-b647-11e6-abfa-fbeb404a08cf','Simmons@SygentaAgent.com','Jemma Simmons','SomeAddress','7294412','Simmons@SygentaAgent.com','Simmons@SygentaAgent.com','NULL','TRUE','MyDefault','1980-01-01','2016-11-29','0'),
+('d09b848c-b648-11e6-abfa-fbeb404a08cf','May@SygentaAgent.com','Melinda May','SomeAddress','4822524','May@SygentaAgent.com','May@SygentaAgent.com','NULL','TRUE','MyDefault','1980-01-01','2016-11-29','0'),
+('98519dee-b64a-11e6-abfa-fbeb404a08cf','Fitz@SygentaAgent.com','Leo Fitz','SomeAddress','5694739','Fitz@SygentaAgent.com','Fitz@SygentaAgent.com','NULL','TRUE','MyDefault','1980-01-01','2016-11-29','0')

@@ -1,0 +1,30 @@
+<div class="scanningOptionsPage" ng-controller="scanOptionsController">
+    
+<div class="proScanMenuPageHeader">
+    <img src="assets/images/slices/u260.png" class="hamburgerMenuIcon" ng-click="onBackClicked()"/>
+   Item Scanner
+      <img src="assets/images/slices/u228.png" class="syncIcon" ng-click="syncToServer()"/>
+   </div>
+    <div class="scanningOptionsPageBody">
+        <div class="imagesContainer">
+      <img src="assets/images/slices/u131.png" class="appLogo"/>
+      
+        </div>
+        <div class="messagesContainer">
+        <p class="message1">Trouble Scanning? Enter Manually.</p>
+         <input type="number" class="form-control barcodeEntry"  placeholder="Enter barcode number here" ng-model="manualBarcode" ng-change="checkBarcode()">
+            <div class="scannerOptionsControlPanel">
+              <img src="assets/images/slices/u1863.png" class="listviewIcon" ng-click="onHistoryIconClicked()"/>
+                <img ng-src="{{tickIcon}}" class="selectIcon" ng-click="scan()" />
+                
+                <div class="singleScan" ng-click="singleScanClicked()" ng-style="singleScanStyleClass"/>
+                <div class="multipleScan" ng-click="multipleScanClicked()">  
+                <div class="sq sq1" ng-style="sqStyleClass"></div>
+                <div class="sq sq2" ng-style="sqStyleClass"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

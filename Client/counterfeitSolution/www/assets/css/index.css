@@ -1,0 +1,1082 @@
+html,body{
+            
+            width:100%;
+            height:100%;
+     
+        }
+                                .loadingGifContainer
+{
+position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url("../images/slices/ajax_loader.gif") 50% 50% no-repeat rgb(249,249,249);
+    display:none;
+    opacity:0.4;
+
+}
+                                #app{
+                                width:100%;
+                                height:100%;
+                                }
+                                #pageView{
+                                width:100%;
+                                height:100%;
+                                }
+
+.color-red{
+    
+    color:red;
+}
+        .proScanLoginPage
+        {
+            
+            width:100%;
+            height:100%;
+            background-color: white;
+        }
+       
+        .proScanLoginHeader
+        {
+          
+                                height: 55px;
+    padding-top: 13px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+   border-bottom: 3px solid #444595;
+    background-color: #00A0BE;
+                
+                
+        }
+        .loginForm
+        {
+         display: inline-block;
+    width: 82%;
+    text-align: center;
+    margin-left: 9%;
+    margin-right: 9%;
+                
+        }
+    .loginFormGrp input{
+                height:43px;
+                float: left;
+    border: none;
+    border-radius: 0;
+                width: calc(100% - 40px);
+                }
+                .loginFormGrp{
+                display: inline-block;
+    width: 100%;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+                }
+       
+                   .loginFormGrp .glyphicon{
+                  float: left;
+    height: 43px;
+    width: 40px;
+    background-color: #ebebeb;
+    color: #989B9E;
+    top: 0;
+    display: table;
+                   }
+                   
+                   .form-control:focus{
+                   border-color: #ebebeb;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #ebebeb;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #ebebeb;
+                   }
+                   
+                   .glyphicon-user:before, .glyphicon-lock:before {
+   
+    display: table-cell;
+    vertical-align: middle;
+}
+
+        .proScanImageContainer
+        {
+                 height: 230px;
+        }
+    
+.loginPageSyngentaImg{
+  margin: auto;
+    height: 200px;
+    width: 208px;
+    display: block;
+    top: 23px;
+    position: relative;
+}
+        .btnSignIn
+        {
+          height: 46px;
+    width: 51%;
+    border-radius: 38px;
+    font-weight: bold;
+    margin-left: 93px;
+    /* padding-bottom: 26px; */
+    /* text-align: center; */
+    background-color: #444595;
+    /* border-color: #009ACA; */
+        }
+        .choiceLbl
+        {
+               text-align: center;
+    margin-top: 10px;
+    font-size: 93%;
+    margin-bottom: 13px;
+        }
+        .googleSignInImg
+        {
+                  margin-left: 89px;
+    height: 46px;
+    width: 51%;
+        }
+        .signInFooter
+        {
+            text-align: center;
+   
+        }
+        .loginMethodLbl
+        {
+            text-align: center;
+    font-size: 93%;
+    color: #009ACA;
+    padding-top: 15px;
+    font-weight: bold;
+    padding-bottom: 26px;
+        }
+                                
+                                
+                                
+                                
+        .registrationLbl
+        {
+            
+          padding-top: 12px;
+    padding-bottom: 5px;
+   width: 100%;
+    font-size: 96%;
+    font-weight: lighter;
+    color: #686868;
+    text-align: center;
+        }
+        .btnSignGoogle
+        {
+           
+    font-size: 98%;
+    width: 60%;
+                background-color:#3D88FA;
+                border-radius:0;
+            height:39px;
+        }
+        .btnSignUp
+        {
+            
+            background-color: transparent;
+            border:none;
+        }
+                                .signUpClass{
+                                cursor:pointer;
+                                font-weight: bold;
+                                color:#666666;
+                                }
+
+                                
+                                
+                                
+                                
+                                
+                                /* menu page styles*/
+                                                .proScanMenuPage{
+                                
+                                height:100%;
+                                width:100%;
+                background-color: #F0EDEB;
+    padding-bottom: 10px;
+                                }
+                                .proScanMenuPageHeader{
+                                width:100%;
+                                background-color: rgba(0, 160, 190, 1);
+                                border-bottom: 4px solid #444595;
+                                height: 55px;   
+    padding-top: 13px;
+    font-size: 15px;
+    color: white;   
+    text-align: center;
+                font-weight: bold;
+                                }
+                                .menuItemsContainer{
+                height: calc(100% - 85px);
+                                background-color:#F0EDEB;
+                                padding-top: 35px;
+        transition: all 0.3s ease;
+   
+    width: 100%;
+   padding-left: calc((100% - 275px)/2);
+                                }
+                                .circularDivContainer{
+                                width: 275px;
+    height: 150px;
+                                }
+                                .circularDiv{
+                                    float: left;
+                                border-radius:50%;
+                                border:4px solid #00A0BE;
+                                height: 120px;
+    width: 120px;
+                background-color: white;
+                cursor:pointer;
+                margin-bottom: 10px;
+                
+                                }
+                                .myProductsDivMargin{
+                                margin-left:35px;
+                                }
+                                .proScanOptionDiv{
+                                
+                                
+                                }
+                                .SingleOptionDiv{
+                                width: 120px;
+    float: left;
+    text-align: center;
+                                }
+                                .menuName{
+                                color: #444595;
+                                font-weight: bold;
+                                }
+                                
+.syngentaLogo{
+    
+    height: 30px;
+    margin-left: auto;
+    display: block;
+   
+    margin-right: auto;
+}
+.dashboardOptionIcons{
+    
+    margin-top: 25px;
+    height: 57px;
+    
+}
+.syncIcon{
+    
+    float: right;
+    margin-right: 11px;
+}
+.hamburgerMenuIcon{
+     float: left;
+    margin-left: 11px;
+    
+}
+
+   /*registrationpage*/
+
+   .btnRegister
+{
+    
+   margin-top: 17px;
+   
+    height: 48px;
+    width: 100%;
+    border-radius: 38px;
+    font-weight: bold;
+    background-color: #009ACA;
+    border-color: #009ACA;
+}
+.retailerInfoLbl
+{
+    margin-top: 30px;
+}
+
+
+
+/*scan result*/
+.btnCancel
+{
+margin-top: 17px;
+   
+    height: 48px;
+    width: 49%;
+    border-radius: 38px;
+    font-weight: bold;
+    background-color: #009ACA;
+    border-color: #009ACA;
+
+}
+.scanResultLbl
+{
+    color: green;
+    font-weight: bold;
+    font-size: 120%;
+}
+/*product results */
+                                .productValidatePage{
+                                    background-color: #F0EDEB;
+    overflow-y: scroll;
+                                height:100%;
+                                width:100%;
+                                }
+                
+                                .resultScreenBody{
+                                height:calc(100% - 55px);
+                                
+                                padding: 15px;
+                                
+                                }
+                                .identification{
+                                font-weight: bold;
+                                }
+                                .productDetails{
+                                width: 325px;
+       height: 325px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 21px 1px #D9D9D9;
+                                
+                                }
+                                .productNameDiv{
+                                    height: 44px;
+    display: table;
+    border-bottom: 1px solid #cccccc;
+    width: 100%;
+                                }
+                                .productName{
+                                display: table-cell;
+    margin-bottom: 0;
+    vertical-align: middle;
+    padding-left: 10px;
+           
+                                }
+                                .productImage{
+                                    height: 180px;
+                                }
+                                .controlBar{
+                                    border: 1px solid #cccccc;
+    height: 52px;
+    margin-top: 10%;
+    border-radius: 36px;
+    margin-left: 10px;
+    width: calc(100% - 20px);
+                padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+                                
+                                }
+                                .scanListImage{
+                                
+                                
+                                
+                                    float: left;
+
+    vertical-align: middle;
+    height: 26px;
+    width: 23px;
+                                
+                                
+                                }
+                                .indicator{
+                                vertical-align: middle;
+    height: 26px;
+    width: 23px;
+                margin-left: calc((100% - 46px - 23px )/2);
+                                }
+                                .shareResImage{
+                                vertical-align: middle;
+    height: 26px;
+    width: 23px;
+                float: right;
+                                }
+                                
+                                .scannedProduct{
+                                margin: auto;
+    display: block;
+   height: 172px;
+    width: 107px;
+    top: 10px;
+    position: relative;
+                                }
+        
+             .barcodeImage{
+            height: 70px;
+    border-radius: 11px;
+   border: 2px solid #cccccc;
+    width: 234px;
+    display: block;
+    margin: auto;
+    padding: 7px;
+    text-align: center;
+    margin-top: 12px;
+    padding-top: 14px;
+            
+        }
+        .barcodeNumber{
+            margin-bottom: 0;
+        }
+        .barcodeProductName{
+            
+        }
+
+/*intermediate page*/
+
+        .scanningOptionsPage{
+            
+            height:100%;
+            width:100%;
+            background-color: #F0EDEB;
+                overflow-y: scroll;
+            
+        }
+        .scanningOptionsPageBody{
+            
+            height:calc(100% - 55px);
+            width:100%;
+        }
+        .appLogo{
+          display: block;
+    /* margin: 24px auto 0 auto; */
+    height: 230px;
+    width: 230px;
+       position: relative;
+    margin: auto;
+             top: 40px;
+  
+            
+        }
+        .message1{
+            color:#cccccc;
+        }
+        .imagesContainer{
+            height: 295px;
+                display: inline-block;
+    width: 100%;
+            
+        }
+        .messagesContainer{
+            
+            padding-left: 32px;
+    display: inline-block;
+    width: 100%;
+   padding-bottom: 25px;
+        }
+        .barcodeEntry{
+            
+            border: transparent;
+    background-color: #F0EDEB;
+    box-shadow: none;
+    padding-left: 0;
+    border-bottom: 1px solid #999999;
+    width: calc(100% - 32px);
+    border-radius: 0;
+    color: #767575;
+    font-size: 16px;
+    padding-bottom: 12px;
+    height: 40px;
+        }
+     .barcodeEntry:focus{
+            border: transparent; 
+            border-bottom: 1px solid #999999;
+            box-shadow:none;
+        }
+        .scannerOptionsControlPanel{
+               border: 1px solid #cccccc;
+    height: 80px;
+   
+    border-radius: 66px;
+    margin-top: 31px;
+            padding-left: 30px;
+        padding-right: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 330px;
+    /* margin: auto; */
+    margin-left: calc((100% - 362px)/2);
+        }
+        .listviewIcon{
+            width: 40px;
+    height: 40px;
+    margin-right: 60px;
+        }
+        .selectIcon{
+            
+        }
+        .singleScan{
+            margin-left: 24px;
+             height: 24px;
+    width: 24px;
+    border: 2px solid #999999;
+    border-radius: 2px;
+            display: inline-block; 
+            top: 5px;
+    position: relative;
+        }
+        .multipleScan{
+            display: inline-block;
+    margin-left: 16px;
+
+            
+        }
+        .sq1{
+               
+    margin-left: 1px;
+
+   
+        }
+        .sq2{
+            top: 10px;
+   
+    left: -21px;
+    }
+          
+            
+            .sq{
+                position: relative;
+               height: 24px;
+    width: 24px;
+    border: 2px solid #999999;
+    border-radius: 2px;
+            display: inline-block;   
+                
+            }
+.sqDeact{
+    
+    border-color: rgba(221, 221, 221, 1);
+}
+
+
+
+
+
+.scannedList
+{
+
+   /* height:67%;*/
+    height: calc(100% - 216px);
+}
+.multiItemListLbl
+{
+   padding-top: 12px;
+    margin-left: 15px;
+    font-size: 106%;
+    font-weight: bold;
+        height: 50px;
+   /* padding-bottom: 4%;*/
+}
+
+.scannedListTable
+{
+    height: 25%;
+    background-color: white;
+    margin-left: 13px;
+    width: 335px;
+    border-radius: 9px;
+    margin-bottom:0px;
+}
+.scanListIcon
+{
+    width: 40px;
+    height: 40px;
+    margin-right: 33px;
+}
+.scannedListTable>tbody>tr>.scanListImage
+{
+
+width:20%;
+padding-top: 17px;
+
+}
+.scannedListTable>tbody>tr>.scanListData
+{
+padding-top: 18px;
+}
+
+.scannedListTable>tbody>tr>.scanListBtn
+{
+padding-top: 31px;
+}
+.shareListIcon
+{
+width: 36px;
+    height: 36px;
+} 
+
+
+
+/*product scan history*/
+.statusButtonsDiv{
+            height: 80px;
+    padding-left: 2%;
+    padding-right: 2%;
+        }
+        .statusBtn{
+            border-color:rgba(204, 204, 204, 1);
+              /* // border-color: rgba(0, 160, 190, 1);*/
+   background-color: white;
+    margin-top: 40px;
+   /*// background-color: rgba(0, 160, 190, 1);*/
+    border-radius: 19px;
+    height: 40px;
+   
+    width: 30%;
+            color:rgba(204, 204, 204, 1);
+            
+        }
+        .btnVerified{
+                margin-right: 3%;
+    width: 30%;
+        }
+        .btnPending{
+                margin-right: 3%;
+            
+        }
+        
+        .btnFailed{
+            
+            
+        }
+        .datePickerDiv{
+                height: 85px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 40px;
+               margin-bottom: 25px;
+        }
+        .datePicker{
+            
+           width: 49%;
+       margin-bottom: 0;
+    
+    border: 2px solid rgba(162, 167, 188, 1);
+    height: 45px;
+            border-radius: 45px;
+            background-color: white;
+        }
+.dateStyle{
+    font-size: 14px;
+    padding-left: 3px;
+}
+
+
+
+        .floatPropLeft{
+            float:left;
+        }
+        .floatPropRight{
+            float:right;
+        }
+        .dateInput{
+            
+            border: 0;
+       width: 83%;
+   
+    height: 40px;
+    float: left;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+        }
+        .calGlyph{
+            
+          float: left;
+    height: 18px;
+    width: 18px;
+    margin-top: 9px;
+        }
+                   .dateInput:focus{
+                   border-color: transparent;
+    outline: 0;
+  
+                box-shadow: none;
+                   }
+                   
+                   .calGlyph:before, .calGlyph:before {
+   
+    display: table-cell;
+    vertical-align: middle;
+}
+        .scannedContents{
+     height: calc(100% - 165px - 25px);
+    overflow-y: auto;
+    width: 92%;
+    background-color: white;
+    margin-left: 4%;
+            border-radius: 6px;
+            
+        }
+        .singleProductDetailContainer{
+            height: 150px;
+    /* display: table; */
+    width: 100%;
+            padding-top: 10px;
+            border-bottom: 2px solid #F0EDEB;
+        }
+        .singleProductImage{
+            float: left;
+   
+    height: 100%;
+    
+    width: 35%;
+         
+            padding-left: calc(30% - 85px);
+        }
+        .singleProductDetails{
+              width: 45%;
+    float: left;
+    height: 100%;
+    padding-top: 25px;
+        }
+        .singleProductShare{
+               width: 20%;
+    float: left; 
+            
+        }
+        .productData{
+            width: 100%;
+            
+        }
+        .proImg{
+            height: 110px;
+    width: 60px;
+            
+        }
+        .currDate{
+                margin-bottom: 0;
+    margin-top: 10px;
+        }
+        .shareIcon{
+               height: 25px;
+    width: 25px;
+    display: block;
+    margin: auto;
+    margin-top: 39px;
+    float: left;
+        }
+.singleProductDetailContainer1{
+    
+        background-color: white;
+    width: 94%;
+    margin-left: 3%;
+        height: 150px;
+   
+   
+    padding-top: 10px;
+    border-bottom: 2px solid #F0EDEB;
+}
+.productBatchScanListContainer{
+    
+       display: inline-block;
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+}
+
+
+.messagesContainerScanListPage{
+        height: 216px;
+    padding-top: 10px;
+}
+
+
+
+
+.containerPage
+        {
+            width:100%;
+            height:100%;
+            background-color: rgba(240, 237, 237, 1);
+        }
+    
+        .proScanMenuPageHeader{
+                                width:100%;
+                                background-color: rgba(0, 160, 190, 1);
+                                border-bottom: 4px solid #444595;
+        transition: all 0.3s ease;
+                                height: 55px;   
+    padding-top: 13px;
+    font-size: 15px;
+    color: white;   
+    text-align: center;
+                font-weight: bold;
+                                }
+        
+        .syncIcon{
+    
+    float: right;
+    margin-right: 11px;
+}
+.hamburgerMenuIcon{
+     float: left;
+    margin-left: 11px;
+    
+}
+        .retailerProdDetails
+        {
+            background-color: white;
+    height: 20%;
+    width: 92%;
+    margin-left: 14px;
+    border-radius: 9px;
+        }
+        .retailerContactDetails
+        {    background-color: white;
+    height: 23%;
+    width: 92%;
+    margin-top: 15px;
+    margin-left: 14px;
+    border-radius: 9px;
+        }
+        .shareDataLbl
+        {
+            padding-bottom: 14px;
+    margin-left: 20px;
+    margin-top: 13px;
+        }
+        .contactDataLbl
+        {
+            margin-top: 10px;
+    margin-left: 20px;
+        }
+        .shareBarcodeImage
+        {
+            width: 30%;
+    float: left;
+        }
+        .sharedBarcodeSrc
+        {
+            height: 97px;
+    width: 67px;
+    padding-top: 13px;
+    padding-left: 9px;
+        }
+        .sharedRetailerSrc
+        {
+            
+        padding-top: 29px;
+    padding-left: 16px;
+        }
+        .shareRetailerImage
+        {
+            height: 100%;
+    width: 30%;
+    float: left;
+        }
+        
+        .shareBarcodeDetails
+
+        {
+            height: 100%;
+    width: 70%;
+    margin-left: 38%;
+    padding-top: 20px;
+        }
+        .retailerName
+        {
+            font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    text-decoration: none;
+    color: #333333;
+        }
+        .retailerStatus
+        {
+            
+        }
+        .imageOverlayDiv
+        {
+            position: relative; left: 0; top: 0; float:left;
+        }
+        .imageTopDiv
+        {
+            position: relative; margin-left: -35px; top: 1px;
+        }
+
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: none;
+    outline-offset: -2px;
+}
+
+
+
+.syncServer
+        {
+            font-size:120%;
+            color:darkblue;
+            font-weight:bold;
+        }
+        .modalTitle
+        {
+            color:white;
+            font-size:147%;
+            font-weight:bolder;
+        }
+        .modalContentTitle
+        {
+            background-color: #00a0be;
+        }
+        .modalContentFooter
+        {
+            background-color: #00a0be;
+        }
+        .transparentButton
+{
+    background-color: Transparent;
+                background-repeat:no-repeat;
+    border: none;
+   
+}
+.buttonFullWidth
+{
+    width: 100%;
+   
+}
+
+
+
+
+
+
+
+
+.page-wrap {
+  float: right;
+  width: 100%;
+  transition: width 0.3s ease;
+    overflow: hidden;
+    height:100%;
+}
+
+.main-nav
+{
+  position: fixed;
+    top: 0;
+    width: 0;
+    box-sizing: border-box;
+    border-width: 1px;
+  
+    border-color: rgba(50, 51, 132, 1);
+    border-radius: 0px;
+    height: 100%;
+    background-color: rgba(50, 51, 132, 1);
+   
+    overflow-y: auto;
+    transition: width 0.3s ease;
+    white-space: nowrap;
+    overflow-x: hidden;
+
+}
+
+
+.main-nav ul li 
+{
+  
+    display: block;
+    height: 84px;
+    color: white;
+    list-style-type: none;
+    line-height: 74px;
+    padding-left: 15px;
+    font-family: MetricWebMedium;
+  
+    
+}
+      .main-nav ul{
+          
+          font-size: 16px;
+    padding-left: 0;
+    font-weight: bold;
+          padding-top: 30px;
+      }
+
+      /*.main-nav ul li:hover {
+          
+          background: #2F434E;
+          
+      }*/
+
+.main-nav:after 
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+.close-menu {
+  display: none;
+}
+
+#main-nav:target {
+  width: 326px;
+}
+
+.openSideBar{
+   width: 200px;
+}
+.movePatientSearchScreen{
+       margin-left: 200px;
+    overflow:hidden;
+
+}
+
+#main-nav:target + .page-wrap {
+
+    width: 100%;
+    /* left: 281px; */
+    overflow: hidden;
+}
+
+#main-nav:target + .page-wrap .close-menu {
+  display: block;
+}
+
+#main-nav:target + .page-wrap .patientSearchPagePageHeader ,#main-nav:target + .page-wrap .searchPatientPageBody,#main-nav:target + .page-wrap .patientSearchPageFooter {
+/*  width: 70%;*/
+/* left: 30%;*/
+    margin-left:326px;
+    overflow:hidden;
+    
+}
+.landingPageFooter
+{
+    height:30px;
+    transition: all 0.3s ease;
+}
+
+.mainMenuOpt
+{
+    padding-left:0px;
+}
+
+.menuOptImage
+{
+
+    height: 60px;
+    width: 55px;
+}
+.sideBarText
+{
+    padding-left:5px;
+}
+
+ul li:after {
+   content: "";
+    display: block;
+    height: 2px;
+    width: 112px;
+    margin: 10px;
+    background: #5b5b9c;
+    margin-left: 53px;
+        margin-top: 0;
+}

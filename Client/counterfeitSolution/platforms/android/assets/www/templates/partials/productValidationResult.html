@@ -1,0 +1,47 @@
+<div class="productValidatePage" >
+    <div class="loadingGifContainer" ng-style="loadingGifDisplay">
+    
+    
+    </div>
+<div class="proScanMenuPageHeader">
+    <img src="assets/images/slices/u260.png" class="hamburgerMenuIcon" ng-click="onBackClicked()"/>
+  My Scans
+      <img src="assets/images/slices/u228.png" class="syncIcon" ng-click="syncToServer()"/>
+   </div>
+<div class="resultScreenBody">
+ <p class="identification">Product identified as</p>
+ <div class="productDetails" ng-repeat="prodDetails in productScannedDetails">
+    <div class="productNameDiv">
+ <p class="productName" ng-class="{'color-red': prodDetails.prodName === 'This product is not identified with Syngenta'}">
+        {{prodDetails.prodName}}</p>
+</div>
+<div class="productImage">
+<img ng-src={{prodDetails.prodImage}} alt="Description"  class="scannedProduct"/>
+</div>
+<div class="barcodeImage">
+<p class="barcodeNumber">{{scannedValue}}</p>
+        <p class="barcodeProductName" ng-if="prodDetails.prodName != 'This product is not identified with Syngenta'">{{prodDetails.prodName}}</p>
+</div>
+ 
+ </div>
+ 
+    <div class="messagesContainer">
+    <div class="scannerOptionsControlPanel">
+              <img src="assets/images/slices/u1803_disabled.PNG" class="listviewIcon"/>
+                <img src="assets/images/slices/u443.png" class="selectIcon" ng-click="onTickClicked()" />
+                
+        <div class="singleScan sqDeact" ></div>
+                <div class="multipleScan">  
+                <div class="sq sq1 sqDeact" ng-style="sqStyleClass"></div>
+                <div class="sq sq2 sqDeact" ng-style="sqStyleClass"></div>
+                    </div>
+    </div>
+</div>
+
+
+    </div>
+
+
+
+</div>
+

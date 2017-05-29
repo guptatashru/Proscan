@@ -1,0 +1,90 @@
+
+<div class="scanningOptionsPage" ng-controller="productScanHistoryController">
+    <div class="loadingGifContainer" ng-style="loadingGifDisplay">
+    
+    
+    </div>
+    <div class="proScanMenuPageHeader">
+            <img src="assets/images/slices/u260.png" class="hamburgerMenuIcon" ng-click="onBackClicked()"/>
+            My Scans
+            <img src="assets/images/slices/u228.png" class="syncIcon" ng-click="syncToServer()"/>
+   </div>
+    <div class="scanningOptionsPageBody">
+        
+        <div class="statusButtonsDiv">
+          <button type="submit" class="btn btn-primary statusBtn btnVerified" ng-click="readVerifiedFromTable()" ng-style="verifiedBtnStyle">VERIFIED</button>
+             <button type="submit" class="btn btn-primary statusBtn btnPending" ng-click="readPendingFromTable()" ng-style="pendingBtnStyle">PENDING</button>
+             <button type="submit" class="btn btn-primary  statusBtn btnFailed" ng-click="readFailedFromTable()" ng-style="failedBtnStyle">FAILED</button>
+        </div>
+        
+        <div class="datePickerDiv">
+            <div class="form-group datePicker floatPropLeft">
+           <input type="date"  class="form-control dateInput startDate dateStyle" id="startDate" placeholder="mm/dd/yyyy"  ng-model="startDate" ng-change="onStartDateChanged()" ><img src="assets/images/slices/icon__calendar_u2033.png" class="calGlyph"/>
+            </div>
+            <div class="form-group datePicker floatPropRight">
+           <input type="date" class="form-control dateInput endDate dateStyle" id="endDate" placeholder="mm/dd/yyyy"  ng-model="endDate" ng-change="onEndDateChanged()" ><img src="assets/images/slices/icon__calendar_u2033.png" class="calGlyph"/>
+            </div>
+        
+          
+        
+        
+        </div>
+          <div class="scannedContents">
+              
+             
+              <div class="singleProductDetailContainer" ng-repeat="product in scannedHistory">
+                 <div class="singleProductImage">
+                   <img ng-src="{{product.ProductImage}}" class="proImg"/>
+                  </div>
+                  <div class="singleProductDetails">
+                   <table class="productData">
+                      <tr >
+                          <td style="font-weight:bold">{{product.ProductName}}</td>
+                       </tr>
+                       <tr>
+                           <td>{{product.BarcodeValue}}</td>
+                       </tr>
+                      </table>
+                      <p class="currDate">{{product.ScanDate| date:"dd-MM-yyyy HH:mm"}}</p>
+                  </div>
+                <div class="singleProductShare">
+                        <img src="assets/images/slices/up_arrow.png" class="shareIcon" ng-if="pending==1 && product.syncStatus==1 && product.isProcessed=='false'"/>             
+ <img src="assets/images/slices/u2180.png" class="shareIcon" ng-click="onShareClicked(product)" />
+                   
+                    <img/>
+                  </div>
+                </div>
+            
+             <label ng-if="scannedHistory.length==0" style="margin-top:20px;">Please sync to view new records.</label>
+              
+              
+              
+              
+              
+              <!--  <div class="singleProductDetailContainer">
+                 <div class="singleProductImage">
+                   <img src="assets/images/slices/u435.png" class="proImg"/>
+                  </div>
+                  <div class="singleProductDetails">
+                   <table class="productData">
+                      <tr >
+                          <td>HYVIDO Belfry</td>
+                       </tr>
+                       <tr>
+                           <td>6578538593</td>
+                       </tr>
+                      </table>
+                      <p class="currDate">56 57 5858</p>
+                  </div>
+                <div class="singleProductShare">
+                                    
+ <img src="assets/images/slices/u2180.png" class="shareIcon"/>
+                  </div>
+                </div>-->
+              
+              
+              
+            
+            </div>
+         </div>
+        </div>

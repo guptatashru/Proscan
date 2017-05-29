@@ -1,0 +1,43 @@
+<div class="containerPage" ng-controller="productShareDetailsController"> 
+    <div class="proScanMenuPageHeader">
+    <img src="assets/images/slices/u260.png" class="hamburgerMenuIcon" ng-click="onBackClicked()"/>
+  Share
+      <img src="assets/images/slices/u228.png" class="syncIcon" ng-click="syncToServer()"/>
+   </div>
+    <div class="shareDataLbl">Your retailer's scanned product was:</div>
+    <div class="retailerProdDetails">
+        <div class="shareBarcodeImage"><img src="assets/images/slices/u2169.png" class="sharedBarcodeSrc"></div>
+        <div class="shareBarcodeDetails">
+            <p>{{productName}}</p>
+            <p>{{barcodeValue}}</p>
+            <p>{{date|date:'dd-MM-yyyy'}}</p>
+            
+        
+        </div>
+        
+    </div>
+     <div class="contactDataLbl">Contact details for retailer:</div>
+     <div class="retailerContactDetails">
+          <div class="shareRetailerImage"><img src="assets/images/slices/u6527.png" class="sharedRetailerSrc"></div>
+        <div class="shareBarcodeDetails">
+            <p class="retailerName">Robert Fiera</p>
+            <p class="retailerStatus">Online</p>
+            <div class="imageOverlayDiv"><img src="assets/images/slices/u452.png" style="position: relative; left: 0; top: 0;">
+                <img src="assets/images/slices/u484.png" class="imageTopDiv">
+            </div>
+            <div class="imageOverlayDiv">
+                <img src="assets/images/slices/u452.png" ng-click="onEmailClicked()" style="position: relative; left: 0; top: 0;">
+                <img src="assets/images/slices/u454.png"  class="imageTopDiv">
+            </div>
+             <div style="position: relative; left: 0; top: 0;">
+                <img src="assets/images/slices/u452.png" style="position: relative; left: 0; top: 0;">
+                <img src="assets/images/slices/u484.png"  class="imageTopDiv">
+            </div>
+                
+        </div>
+    </div>
+    
+    
+  
+       
+</div>

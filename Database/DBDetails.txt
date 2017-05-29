@@ -1,0 +1,4 @@
+Server: proscan-sqlserver
+UserName: proScanUser
+Password: pr0ScanPass
+DB Name: proscanDB

@@ -1,0 +1,306 @@
+USE [master]
+GO
+/****** Object:  Database [syngentaDB]    Script Date: 12/15/2016 2:06:10 PM ******/
+CREATE DATABASE [syngentaDB]
+GO
+ALTER DATABASE [syngentaDB] SET COMPATIBILITY_LEVEL = 130
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [syngentaDB].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [syngentaDB] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [syngentaDB] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [syngentaDB] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [syngentaDB] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [syngentaDB] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [syngentaDB] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [syngentaDB] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [syngentaDB] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [syngentaDB] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [syngentaDB] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [syngentaDB] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [syngentaDB] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [syngentaDB] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [syngentaDB] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [syngentaDB] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [syngentaDB] SET ALLOW_SNAPSHOT_ISOLATION ON 
+GO
+ALTER DATABASE [syngentaDB] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [syngentaDB] SET READ_COMMITTED_SNAPSHOT ON 
+GO
+ALTER DATABASE [syngentaDB] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [syngentaDB] SET  MULTI_USER 
+GO
+ALTER DATABASE [syngentaDB] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [syngentaDB] SET QUERY_STORE = ON
+GO
+ALTER DATABASE [syngentaDB] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30), DATA_FLUSH_INTERVAL_SECONDS = 900, INTERVAL_LENGTH_MINUTES = 60, MAX_STORAGE_SIZE_MB = 100, QUERY_CAPTURE_MODE = AUTO, SIZE_BASED_CLEANUP_MODE = AUTO)
+GO
+USE [syngentaDB]
+GO
+/****** Object:  Table [dbo].[__MigrationHistory]    Script Date: 12/15/2016 2:06:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[__MigrationHistory](
+	[MigrationId] [nvarchar](150) NOT NULL,
+	[ContextKey] [nvarchar](300) NOT NULL,
+	[Model] [varbinary](max) NOT NULL,
+	[ProductVersion] [nvarchar](32) NOT NULL,
+ CONSTRAINT [PK_dbo.__MigrationHistory] PRIMARY KEY CLUSTERED 
+(
+	[MigrationId] ASC,
+	[ContextKey] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+
+GO
+/****** Object:  Table [dbo].[Agents]    Script Date: 12/15/2016 2:06:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Agents](
+	[Id] [nvarchar](128) NOT NULL,
+	[LoginID] [nvarchar](max) NOT NULL,
+	[Name] [nvarchar](255) NULL,
+	[Address] [nvarchar](255) NULL,
+	[MobileNo] [nvarchar](20) NULL,
+	[Email] [nvarchar](255) NULL,
+	[PNSID] [nvarchar](255) NULL,
+	[ProfileImage] [nvarchar](max) NULL,
+	[isEnabled] [bit] NOT NULL,
+	[Version] [timestamp] NOT NULL,
+	[CreatedAt] [datetimeoffset](7) NOT NULL,
+	[UpdatedAt] [datetimeoffset](7) NULL,
+	[Deleted] [bit] NOT NULL,
+ CONSTRAINT [PK_dbo.Agents] PRIMARY KEY NONCLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+
+GO
+/****** Object:  Index [IX_CreatedAt]    Script Date: 12/15/2016 2:06:10 PM ******/
+CREATE CLUSTERED INDEX [IX_CreatedAt] ON [dbo].[Agents]
+(
+	[CreatedAt] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+/****** Object:  Table [dbo].[Products]    Script Date: 12/15/2016 2:06:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Products](
+	[Id] [nvarchar](128) NOT NULL,
+	[MaterialID] [int] NOT NULL,
+	[AUn] [nvarchar](255) NULL,
+	[Numerat] [int] NULL,
+	[description] [nvarchar](max) NULL,
+	[Denom] [int] NULL,
+	[EANNumber] [bigint] NULL,
+	[EAN_UPC] [bigint] NULL,
+	[ProfileImage] [nvarchar](max) NULL,
+	[CountryCode] [nvarchar](5) NULL,
+	[Version] [timestamp] NOT NULL,
+	[CreatedAt] [datetimeoffset](7) NOT NULL,
+	[UpdatedAt] [datetimeoffset](7) NULL,
+	[Deleted] [bit] NOT NULL,
+ CONSTRAINT [PK_dbo.Products] PRIMARY KEY NONCLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+
+GO
+/****** Object:  Index [IX_CreatedAt]    Script Date: 12/15/2016 2:06:10 PM ******/
+CREATE CLUSTERED INDEX [IX_CreatedAt] ON [dbo].[Products]
+(
+	[CreatedAt] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+/****** Object:  Table [dbo].[Retailers]    Script Date: 12/15/2016 2:06:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Retailers](
+	[Id] [nvarchar](128) NOT NULL,
+	[LoginID] [nvarchar](max) NOT NULL,
+	[AgentID] [nvarchar](128) NOT NULL,
+	[RetailerCode] [nvarchar](255) NULL,
+	[Name] [nvarchar](255) NULL,
+	[Address] [nvarchar](255) NULL,
+	[MobileNo] [nvarchar](20) NULL,
+	[Email] [nvarchar](255) NULL,
+	[PNSID] [nvarchar](255) NULL,
+	[ProfileImage] [nvarchar](max) NULL,
+	[isEnabled] [bit] NOT NULL,
+	[Version] [timestamp] NOT NULL,
+	[CreatedAt] [datetimeoffset](7) NOT NULL,
+	[UpdatedAt] [datetimeoffset](7) NULL,
+	[Deleted] [bit] NOT NULL,
+ CONSTRAINT [PK_dbo.Retailers] PRIMARY KEY NONCLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+
+GO
+/****** Object:  Index [IX_CreatedAt]    Script Date: 12/15/2016 2:06:10 PM ******/
+CREATE CLUSTERED INDEX [IX_CreatedAt] ON [dbo].[Retailers]
+(
+	[CreatedAt] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+/****** Object:  Table [dbo].[ScanResults]    Script Date: 12/15/2016 2:06:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ScanResults](
+	[Id] [nvarchar](128) NOT NULL,
+	[RetailerID] [nvarchar](128) NOT NULL,
+	[AgentID] [nvarchar](128) NOT NULL,
+	[BarcodeValue] [bigint] NOT NULL,
+	[ProductID] [nvarchar](max) NULL,
+	[isValid] [bit] NOT NULL,
+	[isAgentNotified] [bit] NOT NULL,
+	[ValidationResponse] [nvarchar](255) NULL,
+	[ScanDate] [datetime] NOT NULL,
+	[ScanLocationLat] [decimal](18, 2) NULL,
+	[ScanLocationLong] [decimal](18, 2) NULL,
+	[BatchID] [int] NULL,
+	[isProcessed] [bit] NOT NULL,
+	[CountryCode] [nvarchar](5) NULL,
+	[Version] [timestamp] NOT NULL,
+	[CreatedAt] [datetimeoffset](7) NOT NULL,
+	[UpdatedAt] [datetimeoffset](7) NULL,
+	[Deleted] [bit] NOT NULL,
+ CONSTRAINT [PK_dbo.ScanResults] PRIMARY KEY NONCLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+
+GO
+/****** Object:  Index [IX_CreatedAt]    Script Date: 12/15/2016 2:06:10 PM ******/
+CREATE CLUSTERED INDEX [IX_CreatedAt] ON [dbo].[ScanResults]
+(
+	[CreatedAt] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+/****** Object:  Table [dbo].[TodoItems]    Script Date: 12/15/2016 2:06:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TodoItems](
+	[Id] [nvarchar](128) NOT NULL,
+	[Text] [nvarchar](max) NULL,
+	[Complete] [bit] NOT NULL,
+	[Version] [timestamp] NOT NULL,
+	[CreatedAt] [datetimeoffset](7) NOT NULL,
+	[UpdatedAt] [datetimeoffset](7) NULL,
+	[Deleted] [bit] NOT NULL,
+ CONSTRAINT [PK_dbo.TodoItems] PRIMARY KEY NONCLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+
+GO
+/****** Object:  Index [IX_CreatedAt]    Script Date: 12/15/2016 2:06:10 PM ******/
+CREATE CLUSTERED INDEX [IX_CreatedAt] ON [dbo].[TodoItems]
+(
+	[CreatedAt] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+SET ANSI_PADDING ON
+
+GO
+/****** Object:  Index [IX_AgentID]    Script Date: 12/15/2016 2:06:10 PM ******/
+CREATE NONCLUSTERED INDEX [IX_AgentID] ON [dbo].[Retailers]
+(
+	[AgentID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+SET ANSI_PADDING ON
+
+GO
+/****** Object:  Index [IX_AgentID]    Script Date: 12/15/2016 2:06:10 PM ******/
+CREATE NONCLUSTERED INDEX [IX_AgentID] ON [dbo].[ScanResults]
+(
+	[AgentID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+SET ANSI_PADDING ON
+
+GO
+/****** Object:  Index [IX_RetailerID]    Script Date: 12/15/2016 2:06:10 PM ******/
+CREATE NONCLUSTERED INDEX [IX_RetailerID] ON [dbo].[ScanResults]
+(
+	[RetailerID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+ALTER TABLE [dbo].[Agents] ADD  DEFAULT (newid()) FOR [Id]
+GO
+ALTER TABLE [dbo].[Agents] ADD  DEFAULT (sysutcdatetime()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[Products] ADD  DEFAULT (newid()) FOR [Id]
+GO
+ALTER TABLE [dbo].[Products] ADD  DEFAULT (sysutcdatetime()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[Retailers] ADD  DEFAULT (newid()) FOR [Id]
+GO
+ALTER TABLE [dbo].[Retailers] ADD  DEFAULT (sysutcdatetime()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[ScanResults] ADD  DEFAULT (newid()) FOR [Id]
+GO
+ALTER TABLE [dbo].[ScanResults] ADD  DEFAULT (sysutcdatetime()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[TodoItems] ADD  DEFAULT (newid()) FOR [Id]
+GO
+ALTER TABLE [dbo].[TodoItems] ADD  DEFAULT (sysutcdatetime()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[Retailers]  WITH CHECK ADD  CONSTRAINT [FK_dbo.Retailers_dbo.Agents_AgentID] FOREIGN KEY([AgentID])
+REFERENCES [dbo].[Agents] ([Id])
+GO
+ALTER TABLE [dbo].[Retailers] CHECK CONSTRAINT [FK_dbo.Retailers_dbo.Agents_AgentID]
+GO
+ALTER TABLE [dbo].[ScanResults]  WITH CHECK ADD  CONSTRAINT [FK_dbo.ScanResults_dbo.Agents_AgentID] FOREIGN KEY([AgentID])
+REFERENCES [dbo].[Agents] ([Id])
+GO
+ALTER TABLE [dbo].[ScanResults] CHECK CONSTRAINT [FK_dbo.ScanResults_dbo.Agents_AgentID]
+GO
+ALTER TABLE [dbo].[ScanResults]  WITH CHECK ADD  CONSTRAINT [FK_dbo.ScanResults_dbo.Retailers_RetailerID] FOREIGN KEY([RetailerID])
+REFERENCES [dbo].[Retailers] ([Id])
+GO
+ALTER TABLE [dbo].[ScanResults] CHECK CONSTRAINT [FK_dbo.ScanResults_dbo.Retailers_RetailerID]
+GO
+USE [master]
+GO
+ALTER DATABASE [syngentaDB] SET  READ_WRITE 
+GO

@@ -1,0 +1,104 @@
+<!--
+<div class="proScanMenuPage">
+    <div class="loadingGifContainer" ng-style="loadingGifDisplay">
+    
+    
+    </div>
+   <div class="proScanMenuPageHeader">
+       <img src="assets/images/slices/hamburgerMenu.PNG" class="hamburgerMenuIcon" ng-click="logOut()"/>
+   proScan
+       
+       <img src="assets/images/slices/u228.png" class="syncIcon" ng-click="syncToServer()"/>
+   </div>
+   <div class="menuItemsContainer">
+   <div class="circularDivContainer">
+   
+   <div class=" SingleOptionDiv" ng-click="onProscanClicked()">
+         <div class="circularDiv">
+	      <img src="assets/images/slices/dashboardSlice1.PNG" class="dashboardOptionIcons"/>
+	     </div>
+	     <span class="menuName"> proScan</span>
+	</div>
+	<div class=" SingleOptionDiv myProductsDivMargin" ng-click="onMyScansClicked()">
+	
+	 <div class="circularDiv ">
+         <img src="assets/images/slices/productsLogo.PNG" class="dashboardOptionIcons"/>
+	 </div>
+	<span class="menuName"> My Products</span>
+	  </div>
+	</div>
+       
+      
+         
+       
+       
+   
+   
+   
+</div>
+    <img class="syngentaLogo" src="assets/images/slices/u103.png"/>
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+<div class="proScanMenuPage" mn-touch swipe-right="navAppear = false" swipe-left="navAppear = true">
+<nav class="main-nav" id="main-nav">
+    <ul> 
+                   
+
+                   <li ng-click="myScansClicked()"> <img src="assets/images/slices/scanImg.JPG" class="menuOptImage"  /><span class="sideBarText">My Scans</span></li>
+                   <li ng-click="proscanClicked()"> <img src="assets/images/slices/proScanImg.JPG" class="menuOptImage"  /><span class="sideBarText">proScan</span></li>
+        <li ng-click="logoutClicked()" ng-if="userLoggedIn==1||googleUserLoggedIn==1"> <img src="assets/images/slices/logout.JPG" class="menuOptImage"  /><span class="sideBarText">Logout</span></li>
+    </ul>
+      
+      
+    </nav>
+
+
+
+
+
+<div class="page-wrap">
+
+   <div class="proScanMenuPageHeader">
+       <img src="assets/images/slices/hamburgerMenu.PNG" class="hamburgerMenuIcon" ng-click="menuOpen()" />
+   proScan
+       
+       <img src="assets/images/slices/u228.png" class="syncIcon" ng-click="syncToServer()"/>
+   </div>
+   
+
+   <div class="menuItemsContainer">
+   <div class="circularDivContainer">
+   
+   <div class=" SingleOptionDiv" ng-click="onProscanClicked()">
+         <div class="circularDiv">
+                      <img src="assets/images/slices/dashboardSlice1.PNG" class="dashboardOptionIcons"/>
+                     </div>
+                     <span class="menuName"> proScan</span>
+                </div>
+                <div class=" SingleOptionDiv myProductsDivMargin" ng-click="onMyScansClicked()">
+                
+                <div class="circularDiv ">
+         <img src="assets/images/slices/productsLogo.PNG" class="dashboardOptionIcons"/>
+                </div>
+                <span class="menuName"> My Products</span>
+                 </div>
+                </div>
+       
+      
+</div>
+    <div class="landingPageFooter">
+    <img class="syngentaLogo" src="assets/images/slices/u103.png"/>
+    </div>
+</div>
+</div>

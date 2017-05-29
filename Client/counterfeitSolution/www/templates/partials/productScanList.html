@@ -1,0 +1,152 @@
+<div class="scanningOptionsPage" ng-controller="productScanCurrentListController">
+    <div class="proScanMenuPageHeader">
+            <img src="assets/images/slices/u260.png" class="hamburgerMenuIcon" ng-click="onBackClicked()"/>
+            Item Scanner
+            <img src="assets/images/slices/u228.png" class="syncIcon" ng-click="syncToServer()"/>
+   </div>
+    <div class="scanningOptionsPageBody">
+        <div class="scannedList">
+             <div class="multiItemListLbl">Multi-item Scans</div>
+                <!-- <table class="table scannedListTable" ng-repeat="scanList in multipleScanItems">
+                     <tbody>
+                         <tr>
+                             <td class="scanListImage"><img src="assets/images/slices/u1186.png" class="scanListIcon"/></td>
+
+                             <td class="scanListData">
+                                 <div>{{scanList.productName}}</div>
+                              <div>{{scanList.barcodeNumber}}</div>
+                              <div>{{scanList.captureTime}}</div> 
+                              </td>
+                              <td class="scanListBtn"><img src="assets/images/slices/u1190.png" class="shareListIcon"/></td>
+
+                         <tr>
+                            
+
+                    </tbody>
+
+
+                 </table>-->
+            
+         <!--    <table class="table scannedListTable">
+                     <tbody>
+                         <tr>
+                             <td class="scanListImage"><img src="assets/images/slices/u1186.png" class="scanListIcon"/></td>
+
+                             <td class="scanListData">
+                                 <div>Hyvido bELRU</div>
+                              <div>123456789095</div>
+                              <div>22-10-56 15:23</div> 
+                              </td>
+                              <td class="scanListBtn"><img src="assets/images/slices/u1190.png" class="shareListIcon"/></td>
+
+                         <tr>
+                            
+
+                    </tbody>
+
+
+                 </table>
+            
+              <table class="table scannedListTable">
+                     <tbody>
+                         <tr>
+                             <td class="scanListImage"><img src="assets/images/slices/u1186.png" class="scanListIcon"/></td>
+
+                             <td class="scanListData">
+                                 <div>Hyvido bELRU</div>
+                              <div>123456789095</div>
+                              <div>22-10-56 15:23</div> 
+                              </td>
+                              <td class="scanListBtn"><img src="assets/images/slices/u1190.png" class="shareListIcon"/></td>
+
+                         <tr>
+                            
+
+                    </tbody>
+
+
+                 </table>-->
+            <div class="productBatchScanListContainer">
+                  <div class="singleProductDetailContainer1"  ng-repeat="scanList in multipleScanItems">
+                 <div class="singleProductImage">
+                   <img src="assets/images/slices/u1186.png" class="proImg"/>
+                  </div>
+                  <div class="singleProductDetails">
+                   <table class="productData">
+                      <tr >
+                          <td></td>
+                       </tr>
+                       <tr>
+                           <td>{{scanList.BarcodeValue}}</td>
+                       </tr>
+                      </table>
+                      <p class="currDate">{{scanList.ScanDate| date:"dd-MM-yyyy HH:mm"}}</p>
+                  </div>
+                <div class="singleProductShare">
+                                    
+ <img src="assets/images/slices/u1190.png" class="shareIcon"/>
+                  </div>
+                </div>
+            
+               <!--   <div class="singleProductDetailContainer1"  >
+                 <div class="singleProductImage">
+                   <img src="assets/images/slices/u1186.png" class="proImg"/>
+                  </div>
+                  <div class="singleProductDetails">
+                   <table class="productData">
+                      <tr >
+                          <td>scanList.productName</td>
+                       </tr>
+                       <tr>
+                           <td>scanList.barcodeNumber</td>
+                       </tr>
+                      </table>
+                      <p class="currDate">scanList.captureTime</p>
+                  </div>
+                <div class="singleProductShare">
+                                    
+ <img src="assets/images/slices/u1190.png" class="shareIcon"/>
+                  </div>
+                </div>
+                
+                     <div class="singleProductDetailContainer1"  >
+                 <div class="singleProductImage">
+                   <img src="assets/images/slices/u1186.png" class="proImg"/>
+                  </div>
+                  <div class="singleProductDetails">
+                   <table class="productData">
+                      <tr >
+                          <td>scanList.productName</td>
+                       </tr>
+                       <tr>
+                           <td>scanList.barcodeNumber</td>
+                       </tr>
+                      </table>
+                      <p class="currDate">scanList.captureTime</p>
+                  </div>
+                <div class="singleProductShare">
+                                    
+ <img src="assets/images/slices/u1190.png" class="shareIcon"/>
+                  </div>
+                </div>-->
+              
+       
+        </div>
+                 
+        </div>
+        <div class="messagesContainer messagesContainerScanListPage">
+            <p class="message1">Trouble Scanning? Enter Manually.</p>
+            <input type="number" class="form-control barcodeEntry"  placeholder="Enter barcode number here" ng-model="manualBarcode" ng-change="checkBarcode()">
+                <div class="scannerOptionsControlPanel">
+                <img src="assets/images/slices/u1863.png" class="listviewIcon" ng-click="onHistoryIconClicked()"/>
+                    <img ng-src="{{tickIcon}}" class="selectIcon" ng-click="scan()"/>
+                    
+                    <div class="singleScan" ng-click="singleScanClicked()" ng-style="singleScanStyleClass"/>
+                    <div class="multipleScan" ng-click="multipleScanClicked()">  
+                    <div class="sq sq1" ng-style="sqStyleClass"></div>
+                    <div class="sq sq2" ng-style="sqStyleClass"></div>
+                        </div>
+                </div>
+        </div>
+    </div>
+</div>
